@@ -126,6 +126,12 @@
 • Frontend Cache: Use client-side caching (e.g., React Query) to store already fetched messages for smooth scrolling.
 • Backend Cache: Use Redis to store frequently accessed chat data (e.g., last 100 messages per chat).
 
-#### Data Persisten
+#### Data Persistence
 
 • Store Data in a PostgreSQL DB
+
+#### Testing and Observability
+
+• Extensive Unit Testing
+• Adequate functional testing
+• Clean Logging and interaction tracking to closely track user interactions and debug issues

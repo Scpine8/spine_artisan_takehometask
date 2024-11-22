@@ -1,50 +1,36 @@
-# React + TypeScript + Vite
+# Sean Pine Take Home Project for Artisan AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I had pleasure putting this together. Thank you all for the opportunity!
 
-Currently, two official plugins are available:
+## Setup Instructions
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Install Dependencies:
 
-## Expanding the ESLint configuration
+**Backend**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Ensure you have python and pip installed. Then run `pip install -r requirements.txt` from the /backend directory.
+2. Importantly, use the OpenAI secret that I shared via email through a secure link to Sinead. This secret must be pasted in a `.env` file in your `/backend` directory. _You need to complete this step in order for the Chat Bot to work_
+3. To run the FastAPI server, run `uvicorn main:app --reload`. Navigate to the `/docs` path of the server url to see the API docs.
 
-- Configure the top-level `parserOptions` property like this:
+**Frontend**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Use your favorite package manager to install the contents of `package.json`
+2. Run the `dev` script to serve the plugin
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+#### Noteable Dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+**Backend**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- FastAPI
+- Pydantic
+- OpenAI
+
+**Frontend**
+
+- Shadcn/ui
+- lucid-react (for iconography)
+- axios
+
+#### Testing
+
+- Jest / PyTest for Unit Testing
