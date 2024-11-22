@@ -1,0 +1,9 @@
+.button {
+  padding: 0;
+}
+
+.editButton {
+  padding: 0;
+  background-color: inherit;
+  color: #fdfdfdc9;
+}
